@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copa Ciudad - Torneo de Fútbol</title>
+    <meta name="description" content="Sitio oficial del Torneo de Fútbol Copa Ciudad. Consulta noticias, equipos, calendario y regístrate para participar." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <nav class="nav">
+            <a class="logo" href="#inicio">Copa Ciudad</a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <ul class="nav__links">
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#sedes">Sedes</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+            </ul>
+        </nav>
+        <div class="hero__content">
+            <h1>Vive la pasión del Torneo de Fútbol Copa Ciudad 2024</h1>
+            <p>16 equipos, 4 sedes y un solo campeón. ¡Prepárate para el mejor torneo amateur de la temporada!</p>
+            <a class="btn" href="#registro">Inscribe a tu equipo</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="contador">
+            <div class="section__header">
+                <h2>Cuenta regresiva</h2>
+                <p>El torneo inicia en:</p>
+            </div>
+            <div class="countdown" aria-live="polite">
+                <div class="countdown__item">
+                    <span id="days">0</span>
+                    <small>Días</small>
+                </div>
+                <div class="countdown__item">
+                    <span id="hours">0</span>
+                    <small>Horas</small>
+                </div>
+                <div class="countdown__item">
+                    <span id="minutes">0</span>
+                    <small>Min</small>
+                </div>
+                <div class="countdown__item">
+                    <span id="seconds">0</span>
+                    <small>Seg</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="equipos">
+            <div class="section__header">
+                <h2>Equipos participantes</h2>
+                <p>Conoce a los protagonistas de la Copa Ciudad.</p>
+            </div>
+            <div class="grid grid--teams">
+                <article class="card">
+                    <h3>Tigres del Centro</h3>
+                    <p>Actual campeón. Destacan por su juego ofensivo y presión alta.</p>
+                </article>
+                <article class="card">
+                    <h3>Huracanes Norteños</h3>
+                    <p>Defensa férrea y contraataque letal, debutan en la edición 2024.</p>
+                </article>
+                <article class="card">
+                    <h3>Estrellas del Sur</h3>
+                    <p>Combinan experiencia y juventud, favoritos del público local.</p>
+                </article>
+                <article class="card">
+                    <h3>Atlético Bahía</h3>
+                    <p>Plantilla dinámica con gran precisión en el pase y posesión.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--dark" id="calendario">
+            <div class="section__header">
+                <h2>Calendario y resultados</h2>
+                <p>Filtra los partidos por fase para planificar tu asistencia.</p>
+                <div class="filters" role="group" aria-label="Filtrar partidos por fase">
+                    <button class="btn btn--secondary" data-phase="todas" aria-pressed="true">Todas</button>
+                    <button class="btn btn--secondary" data-phase="grupos">Fase de grupos</button>
+                    <button class="btn btn--secondary" data-phase="semifinal">Semifinales</button>
+                    <button class="btn btn--secondary" data-phase="final">Final</button>
+                </div>
+            </div>
+            <div class="schedule" id="schedule" role="list">
+                <article class="match" data-phase="grupos">
+                    <h3>Grupo A - Jornada 1</h3>
+                    <p><strong>Tigres del Centro</strong> vs. Huracanes Norteños</p>
+                    <p>12 de julio · 18:00 · Estadio Central</p>
+                </article>
+                <article class="match" data-phase="grupos">
+                    <h3>Grupo B - Jornada 1</h3>
+                    <p><strong>Estrellas del Sur</strong> vs. Atlético Bahía</p>
+                    <p>13 de julio · 19:30 · Estadio Bahía</p>
+                </article>
+                <article class="match" data-phase="semifinal">
+                    <h3>Semifinal 1</h3>
+                    <p>1º Grupo A vs. 2º Grupo B</p>
+                    <p>27 de julio · 17:00 · Estadio Central</p>
+                </article>
+                <article class="match" data-phase="semifinal">
+                    <h3>Semifinal 2</h3>
+                    <p>1º Grupo B vs. 2º Grupo A</p>
+                    <p>27 de julio · 20:00 · Estadio Central</p>
+                </article>
+                <article class="match" data-phase="final">
+                    <h3>Gran Final</h3>
+                    <p>Ganador Semifinal 1 vs. Ganador Semifinal 2</p>
+                    <p>3 de agosto · 19:00 · Estadio Central</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="sedes">
+            <div class="section__header">
+                <h2>Sedes del torneo</h2>
+                <p>Cuatro estadios icónicos listos para recibir la emoción del fútbol.</p>
+            </div>
+            <div class="grid grid--venues">
+                <article class="card card--venue">
+                    <h3>Estadio Central</h3>
+                    <p>Capacidad para 18,000 aficionados, recientemente renovado.</p>
+                </article>
+                <article class="card card--venue">
+                    <h3>Estadio Bahía</h3>
+                    <p>Ubicado frente al mar, conocido por su ambiente festivo.</p>
+                </article>
+                <article class="card card--venue">
+                    <h3>Cancha Universitaria</h3>
+                    <p>Centro de formación y talento juvenil de la región.</p>
+                </article>
+                <article class="card card--venue">
+                    <h3>Complejo Norte</h3>
+                    <p>Infraestructura moderna con accesos de transporte público.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--highlight" id="registro">
+            <div class="section__header">
+                <h2>Registra a tu equipo</h2>
+                <p>Completa el formulario y asegura tu lugar antes del 30 de junio.</p>
+            </div>
+            <form class="form" aria-label="Formulario de registro" netlify>
+                <div class="form__group">
+                    <label for="team-name">Nombre del equipo</label>
+                    <input id="team-name" name="team-name" type="text" placeholder="Ej. Guerreros FC" required />
+                </div>
+                <div class="form__group">
+                    <label for="manager-name">Nombre del representante</label>
+                    <input id="manager-name" name="manager-name" type="text" placeholder="Ej. Ana Pérez" required />
+                </div>
+                <div class="form__group">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" placeholder="contacto@equipo.com" required />
+                </div>
+                <div class="form__group form__group--full">
+                    <label for="message">Comentarios adicionales</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Indica horarios preferentes, peticiones, etc."></textarea>
+                </div>
+                <button class="btn" type="submit">Enviar registro</button>
+            </form>
+        </section>
+
+        <section class="section" id="noticias">
+            <div class="section__header">
+                <h2>Últimas noticias</h2>
+                <p>Actualizaciones y comunicados oficiales del torneo.</p>
+            </div>
+            <div class="grid grid--news">
+                <article class="card">
+                    <h3>Presentación oficial del balón 2024</h3>
+                    <p>El nuevo diseño incorpora tecnología que mejora la estabilidad en vuelo.</p>
+                    <a href="#" class="link">Leer más</a>
+                </article>
+                <article class="card">
+                    <h3>Alianza con escuelas deportivas</h3>
+                    <p>Se lanzan clínicas de fútbol gratuitas para jugadores sub-15.</p>
+                    <a href="#" class="link">Leer más</a>
+                </article>
+                <article class="card">
+                    <h3>Programación del Fan Fest</h3>
+                    <p>Conciertos, food trucks y zonas interactivas para toda la familia.</p>
+                    <a href="#" class="link">Leer más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p>&copy; <span id="year"></span> Copa Ciudad. Todos los derechos reservados.</p>
+            <div class="footer__links">
+                <a href="#registro">Inscripciones</a>
+                <a href="mailto:info@copaciudad.com">Contacto</a>
+                <a href="#sedes">Logística</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
